@@ -40,12 +40,44 @@ public void copyFromButtonsToBuffer() {
 
 public boolean isValid(int r, int c) {
   //your code here
+  if(r >= 0 && r <= 4 && c >= 0 && c <=4){
+    return true;
+  }
   return false;
 }
 
 public int countNeighbors(int row, int col) {
   int neighbors = 0;
   //your code here
+  boolean[][] grid  ={{true,false,false,true,false},
+                      {false,false,false,false,true},
+                      {false,true, true,false, false},
+                      {false,false,false,false,false},
+                      {true,false,false,true,false}};
+  if(isValid(row-1,col-1) && grid[row-1][col-1]==true){
+    neighbors++;
+  }
+  else if(isValid(row-1,col) && grid[row-1][col]==true){
+    neighbors++;
+  }
+  else if(isValid(row-1,col+1) && grid[row-1][col+1]==true){
+    neighbors++;
+  }
+  else if(isValid(row,col-1) && grid[row][col-1]==true){
+    neighbors++;
+  }
+  else if(isValid(row,col+1) && grid[row][col+1]==true){
+    neighbors++;
+  }
+  else if(isValid(row+1,col-1) && grid[row+1][col-1]==true){
+    neighbors++;
+  }
+  else if(isValid(row+1,col) && grid[row+1][col]==true){
+    neighbors++;
+  }
+  else if(isValid(row+1,col+1) && grid[row+1][col+1]==true){
+    neighbors++;
+  }
   return neighbors;
 }
 
