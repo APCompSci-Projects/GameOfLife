@@ -38,13 +38,13 @@ public void copyFromButtonsToBuffer() {
   //your code here
 }
 
-public boolean isValid(int r, int c) {
+public boolean isValid(int NUM_ROWS, int NUM_COLS,int r, int c) {
   //your code here
-  if(r >= 0 && r <= 4 && c >= 0 && c <=4){
+  if(r < NUM_ROWS && r >= 0 && c < NUM_COLS && c >= 0){
     return true;
   }
   return false;
-}
+ }
 
 public int countNeighbors(int row, int col) {
   int neighbors = 0;
