@@ -47,6 +47,7 @@ public boolean isValid(int NUM_ROWS, int NUM_COLS,int r, int c) {
  }
 
 public int countNeighbors(int row, int col) {
+  //isValid now needs 4 arguments instead of 2, will fix soon.
   int neighbors = 0;
   //your code here
   boolean[][] grid  ={{true,false,false,true,false},
