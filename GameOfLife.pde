@@ -32,10 +32,22 @@ public void keyPressed() {
 
 public void copyFromBufferToButtons() {
   //your code here
+  if(buffer[r][c] == true){
+    buttons[r][c] = true;
+  }
+  else{
+    buttons[r][c] = false;
+  }
 }
 
 public void copyFromButtonsToBuffer() {
   //your code here
+  if (buttons[r][c] == false){
+    buffer[r][c] = true;
+  }
+  else{
+    buffer[r][c] = false;
+  }
 }
 
 public boolean isValid(int NUM_ROWS, int NUM_COLS,int r, int c) {
